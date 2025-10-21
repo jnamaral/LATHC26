@@ -1,0 +1,137 @@
+---
+title: CDP Program
+---
+
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+<h1>Program</h1>
+
+	<h2> 02 March 2025</h2><br>
+	<h4>Room: Cypress</h4>
+	
+<table class="program"><tbody>
+    <tr>
+      <td><b>Session 1:</b></td> <td> Chair: <b>Yaoqing Gao</b> &#8212; Huawei Canada<td>
+    </tr>
+    
+    <tr>
+      <td> 1:00 - 1:25 </td> <td> <a href="#Enhancing">Enhancing the Power of Polyhedral-Based Optimizations with Coordinate Descent</a>  &#8212; Gaurav Verma, Michael Canesche, Barbara Chapman, and Fernando Magno Quint&atilde;o Pereira</td> 
+        </tr>
+    <tr>
+      <td>1:25 - 1:50</td> <td> <a href="#Crawling">Crawling for Code-Transformation Opportunities</a>  &#8212; Reza Ghanbari, Nathan Ulmer, Caio Salvador Rohwedder, Henry Kao, Ehsan Amiri, and J. Nelson Amaral</td>
+    </tr>
+    <tr>
+      <td>1:50 - 2:15</td> <td><a href="#Data-driven">A Data-driven Analysis of Code Optimizations</a>  &#8212; Akram Badreddine, Baghdadi Riyadh, Khaled Afif</td>
+    </tr>
+    <tr>
+      <td>2:15 - 2:40</td> <td> <a href="#LLM">LLM-Vectorizer: LLM-based Verified Loop Vectorizer</a>  &#8212; Jubi Taneja, Avery LAird, Cong Yan, Madan Musuvathi, and Shuvendu Lahiri</td>
+    </tr>
+    <tr>
+      <td>2:40 - 3:00</td> <td> <a href="#Chemical">Computing with a Chemical Reservoir</a>  &#8212; Connah Johnson, Nicolas Bohm Agostini, William Cannon, and Antonino Tumeo</td>
+    </tr>
+
+    <tr>
+      <td>3:00-3:30</td> <td><b>Nutrition Break</b></td>
+    </tr>
+
+    <tr>
+      <td><b>Session 2:</b></td> <td> Chair: <b>J. Nelson Amaral</b>, University of Alberta<td>
+    </tr>
+    
+    <tr>
+      <td>3:30 - 4:00</td> <td> <a href="#Dynamic">Dynamic Binary Instrumentation Frameworks Targeting GPUs</a>  &#8212; Matin Raayai-Ardakani, Norman Rubin, and David Kaeli</td>
+          </tr>
+    <tr>
+      <td>4:00 - 4:30</td> <td> <a href="#Design">The Design of a Self-Compiling C Transpiler Targeting POSIX Shell</a>  &#8212; Laurent Huberdeau, Cassandre Hamel, Stefan Monnier, and Marc Feeley</td>
+    </tr>
+    <tr>
+      <td>4:30 - 5:00</td> <td> <a href="#R-HLS">R-HLS: An Intermediate Representation for Dynamic High-Level Synthesis</a>  &#8212; David Christoph Metz, Nico Reissmann, and Magnus Sj&auml;lander</td>
+    </tr>
+  </table>
+ 
+
+  <p><a name="Enhancing"><td><b>Enhancing the Power of Polyhedral-Based Optimizations with Coordinate Descent</b>  </a> <br>
+    Gaurav Verma, Michael Canesche, Barbara Chapman, and Fernando Magno Quint&atilde;o Pereira</br></p>
+
+    <p> <b>Abstract:</b>	Polyhedral optimizations utilize a geometric model of loop iterations to enable transformations like tiling, fusion, and fission. Tools based on polyhedral optimizations, such as Pluto or Polly, can generate highly efficient code through purely static techniques. However, because they are entirely static, these tools struggle to account for the characteristics of the target architecture. As a result, modern kernel schedulers often avoid the polyhedral model, favoring profiling-based techniques that explore the optimization space dynamically.
+In this work, we address this limitation by integrating a dynamic post-optimization phase based on coordinate descent into the polyhedral model. Our approach uses polyhedral-based static analyses to identify a promising kernel ``shape'': the order and structure of the loops that define the kernel. We then apply coordinate descent to fine-tune the parameters of these loops, such as tiling sizes and unrolling factors.
+By incorporating this technique into Pluto, we demonstrate that the resulting kernels outperform those produced by fully static optimizers like Clang -O3 or IOOpt, as well as profile-guided techniques like Apache TVM.</p>
+
+  <p><a name="Crawling"><td><b>Crawling for Code-Transformation Opportunities</b>  </a> <br>
+    Reza Ghanbari, Nathan Ulmer, Caio Salvador Rohwedder, Henry Kao, Ehsan Amiri, and J. Nelson Amaral</br></p>
+
+  <p><b>Abstract:</b> This talk addresses the issue of finding programs that contain code segments to which a given code transformation may be applied. The motivation is that most compiler papers in the literature limit the assessment of a code transformation applicability to a small set of benchmark suites such as SPEC benchmarks, Polybench, and others.
+While this benchmark-driven evaluation facilitates performance comparisons, it suffers from significant limitations: benchmark suites may not adequately represent the diverse range of programs encountered in real-world production environments, leading to techniques that disproportionately target code only found in benchmark suites and quirks specific to a benchmark.
+As a result, the true potential of several code transformations is not investigated, making their practical impact unclear and hindering their adoption in production compilers. A critical unanswered question in such cases is: What types of programs can truly apply the proposed technique?
+To address this challenge, we propose an approach that leverages open-source repositories to identify programs suitable for evaluating new compiler optimizations. Using the GitHub search API, our system employs a crawler that searches GitHub repositories matching specified criteria – currently, C repositories with over 500 stars. The crawler focuses on widely-used and relevant projects by targeting repositories with high star counts. It collects the required headers, builds a dependency graph, and compiles the source files. For successfully compiled files, it extracts additional data via user-defined passes. The collected data is stored in a database, enabling the identification of programs where the technique under evaluation is applicable.
+Even though it may be difficult to conjure a workload and the expected results for programs found by crawling repositories, source-code-based statistics can be collected and lead to a deeper understanding of the potential of a proposed code transformation.
+This approach provides researchers with actionable insights into the applicability of their techniques, and with specific test suites tailored to their needs. Broadening the evaluation scope of a new code transformation facilitates a deeper understanding of how it may perform in real-world scenarios..</p>
+    
+  <p><a name="Data-driven"><td><b>A Data-driven Analysis of Code Optimizations</b>  </a> <br>
+Akram Badreddine, Baghdadi Riyadh, Khaled Afif</br></p>
+
+  <p><b>Abstract: </b> As the demand for computational power grows, optimizing code through compilers becomes increasingly crucial. In this context, we focus on fully automatic code optimization techniques that automate the process of selecting and applying code transformations for better performance without manual intervention. Understanding how these transformations behave and interact is key to designing more effective optimization strategies. Compiler developers must make numerous design choices when constructing these heuristics. For instance, they may decide whether to allow transformations to be explored in any arbitrary order or to enforce a fixed sequence. While the former may theoretically offer the best performance gains, it significantly increases the search space. This raises an important question: Can a predefined, fixed order of applying transformations speed up the search without severely compromising optimization potential? In this paper, we address this and other related questions that arise in the design of automatic code optimization algorithms. Using a data-driven approach, we generate a large dataset of random programs, apply random optimization sequences, and record their execution times. Through statistical analysis, we provide insights that guide the development of more efficient automatic code optimization algorithms.</p>
+
+  <p><a name="LLM"><td><b>LLM-Vectorizer: LLM-based Verified Loop Vectorizer</b>  </a> <br>
+Jubi Taneja, Avery LAird, Cong Yan, Madan Musuvathi, and Shuvendu Lahiri</br></p>
+
+  <p><b>Abstract:</b> Vectorization is a powerful optimization technique that significantly boosts the performance of high performance computing applications operating on large data arrays. Despite decades of research on auto-vectorization, compilers frequently miss opportunities to vectorize code. On the other hand, writing vectorized code manually using compiler intrinsics is still a complex, error-prone task that demands deep knowledge of specific architecture and compilers.</p>
+
+<p>In this paper, we evaluate the potential of large-language models (LLMs) to generate vectorized (Single Instruction Multiple Data) code from scalar programs that process individual array elements. We propose a novel finite-state machine multi-agents based approach that harnesses LLMs and test-based feedback to generate vectorized code. Our findings indicate that LLMs are capable of producing high-performance vectorized code with run-time speedup ranging from 1.1x to 9.4x as compared to the state-of-the-art compilers such as Intel Compiler, GCC, and Clang.</p>
+
+<p>To verify the correctness of vectorized code, we use Alive2, a leading bounded translation validation tool for LLVM IR. We describe a few domain-specific techniques to improve the scalability of Alive2 on our benchmark dataset. Overall, our approach is able to verify 38.2% of vectorizations as correct
+on the TSVC benchmark dataset.</p>
+      
+  <p><a name="Chemical"><td><b>Computing with a Chemical Reservoir</b>  </a> <br>
+Connah Johnson, Nicolas Bohm Agostini, William Cannon, and Antonino Tumeo</br></p>
+
+  <p><b>Abstract:</b> Scientific computing, data analytics and artificial intelligence (in particular with the proliferation of large language models) are driving an explosive growth in computing needs. However, leading-edge high-performance computing systems composed of digital CMOS-based processing elements are reaching physical limits that do not allow any more significant gains in energy efficiency. As we progress towards post-exascale computing systems disruptive approaches to break this barrier in energy efficiency are required. Novel analog and hybrid digital-analog systems promise improvements in energy efficiency of orders of magnitude. Among the various solutions under exploration, biochemical computing has the potential to enable a new type of computing devices with immense computational power. These devices can harness the efficiency of biological cells in solving optimization problems (chemical reactions naturally converge to optimal steady states) and are scalable by considering increasingly larger reaction systems or vessels, potentially meeting the high-performance requirements of scientific computing. However, several theoretical and practical limitations still exist going from how we formulate and map problems to chemical reaction networks (CRNs) to how we should implement actual chemical reaction computing devices.
+In this paper, we propose a framework for chemical computation using biochemical systems and present initial components of our approach: an abstract chemical reaction dialect, implemented as a multi-level intermediate representation (MLIR) compiler extension, and a path for representing mathematical problems with CRNs. We demonstrate the potential of this approach by emulating a simplified chemical reservoir device. This work lays the foundation for leveraging chemistry's computing power to create energy-efficient, high-performance computing systems for contemporary computing needs.</p>
+
+  <p><a name="Dynamic"><td><b>Dynamic Binary Instrumentation Frameworks Targeting GPUs</b>  </a> <br>
+Matin Raayai-Ardakani, Norman Rubin, and David Kaeli</br></p>
+    
+  <p><b>Abstract:</b> Dynamic Binary instrumentation (DBI) is a widely used technique for collecting detailed, fine-grained information from program execution without requiring recompilation or access to the program’s source code. DBI provides several benefits over static instrumentation, including full code discovery and the ability to enable/disable profiling selectively during runtime. Earlier efforts focused on CPU-based DBI, which included ATOM, Pin and DynamoRio. More recently, we have seen the introduction of NVBit and GTPin have extended DBI capabilities to NVIDIA and Intel GPUs, respectively. Presently, there is no available DBI framework for AMD GPUs. This is primarily due to the unique challenges posed by AMD’s hardware and its ROCm runtime.
+
+In this presentation we will cover some of these challenges, and present our approach to enabling DBI on a broad class of platforms, including AMD GPUs. In addition, we will report on our efforts to develop user-facing APIs and internal components for this new DBI framework.</p>
+
+  <p><a name="Design"><td><b>The Design of a Self-Compiling C Transpiler Targeting POSIX Shell</b>  </a> <br>
+Laurent Huberdeau, Cassandre Hamel, Stefan Monnier, and Marc Feeley</br></p>
+
+  <p><b>Abstract:</b> Software supply chain attacks are increasingly frequent and can be
+hard to guard against. Reproducible builds ensure that generated
+artifacts (executable programs) can be reliably created from their
+source code. However, the tools used by the build process are also
+vulnerable to supply chain attacks so a complete solution must also
+include reproducible builds for the various compilers used.</p>
+
+<p>With this problem as our main motivation we explore the use of the
+widely available POSIX shell as the only trusted pre-built binary for
+the reproducible build process. We have developed pnut, a C to POSIX
+shell transpiler written in C that generates human-readable shell
+code. Because the compiler is self-applicable, it is possible to
+distribute a human-readable shell script implementing a C compiler
+that depends only on the existence of a POSIX compliant shell such as
+bash, ksh, zsh, etc. Together, pnut and the shell serve as the seed
+for a chain of builds that create increasingly capable compilers up to
+the most recent version of the GNU Compiler Collection (GCC) that is a
+convenient basis to build any other required tool in the
+toolchain. The end result is a complete build toolchain built only
+from a shell and human-readable source files. We discuss the level of
+C language support needed to achieve our goal, the generation of
+portable POSIX shell code from C, and the performance of the compiler
+  and generated code.</p>
+
+  <p><a name="R-HLS"><td><b>R-HLS: An Intermediate Representation for Dynamic High-Level Synthesis</b>  </a> <br>
+David Christoph Metz, Nico Reissmann, and Magnus Sj&auml;lander</br></p>
+  
+  <p><b>Abstract:</b> R-HLS is an intermediate representation designed for the optimization of dynamically scheduled circuits, enabling performant high-level synthesis (HLS) for applications with irregular control flow and latencies. It is based on the regionalized value state dependence graph (RVSDG), which models control flow as part of the global data flow. R-HLS explicitly models control flow decisions and memory, which are only abstractly represented in the RVSDG. Expressing the control flow as part of the data flow reduces the need for complex optimizations to extract performance and enables easy conversion to parallel circuits.</p>
+
+<p>We illustrate the benefits of R-HLS by creating a distributed memory disambiguation optimization that leverages memory state edges to decouple address generation from data accesses. Our results show that R-HLS effectively exposes parallelism, resulting in fewer executed cycles and a 10% speedup on average, compared to the state-of-the-art in dynamic HLS with optimized memory disambiguation. These results are achieved with a significant reduction in resource utilization, such as a 79% reduction in lookup-tables and 22% reduction in flip-flops, on average.</p>
+      </div> <!-- /.col-lg-12 -->
+    </div> <!-- /.row -->
+  </div> <!-- /.container -->
+</section>
+
