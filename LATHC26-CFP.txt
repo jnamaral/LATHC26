@@ -3,11 +3,13 @@ Call for Presentations
 
 4th Languages, Architectures, and Tools for Heterogeneous Computing (LATHC) Workshop
 
+https://jnamaral.github.io/LATHC26/
+
 Colocated with the IEEE/ACM International Symposium on Code Generation and Optimization (CGO)
 
-Sidney, Australia
+Sydney, Australia
 
-February 1st, 2026 (Tentative)
+February 1st, 2026
 
 The goal of the Languages, Architectures, and Tools for Heterogeneous
 Computing (LATHC) Workshop is to gather researchers and developers to
@@ -32,6 +34,11 @@ the following aspects of heterogeneous computing:
 
 * Programming Models and Programming Languages
 * Programming Frameworks
+* Accelerating Machine Learning Systems
+* Code Generation for ML Computational Graphs
+* Leveraging ML for Better Compilers
+* More Effective Programming Systems for ML
+* AI Solutions for More Efficient Programming
 * Compiler Design and Implementation
 * Intermediate Representations
 * Software Stack
@@ -72,10 +79,7 @@ Kai Ting Wang (Amy) - Huawei Canada
 Jingling Xue - University of New South Wales (UNSW)
 Michael O'Boyle - The University of Edinburgh
 David Kaeli - Northeastern University 
-Magnua Sjalander - Norwegian University of Science and Technology - NTNU
+Magnus Sjalander - Norwegian University of Science and Technology - NTNU
 Jubi Taneja - Microsoft
 Christophe Dubach - McGill University
 Prashant Nair - University of British Columbia
-
-
-
