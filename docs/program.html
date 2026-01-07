@@ -61,7 +61,7 @@ title: CDP Program
       <td>1:45 - 2:20</td> <td> <a href="#Prediction">Mitigating Branch Mispredictions and Measurement Biases Through Code Alignment Techniques</a>  &#8212; Henry Kao, Bryan Chan</td>
           </tr>
     <tr>
-      <td>2:20 - 2:55</td> <td> <a href="#PTO">Synergizing Parallel Tile Operation (PTO) and Compiler Tile Fusion: A New Paradigm for DSA Acceleratio</a>  &#8212; Wenbo Sun, Ruoyu Zhou, Reza Azimi, Ka Lok Chan </td>
+      <td>2:20 - 2:55</td> <td> <a href="#PTO">Synergizing Parallel Tile Operation (PTO) and Compiler Tile Fusion: A New Paradigm for DSA Acceleration</a>  &#8212; Wenbo Sun, Ruoyu Zhou, Reza Azimi, Ka Lok Chan </td>
     </tr>
     <tr>
       <td>2:55 - 3:30</td> <td> <a href="#HLS">Fast and Accurate IR-Driven Simulation for HLS System Design: Updates from the Bambu Framework</a>  &#8212; Michele Fiorito, Serena Curzel, Fabrizio Ferrandi </td>
@@ -162,7 +162,7 @@ Henry Kao, Bryan Chan</p>
 
 <p><b>Abstract</b>: We find that seemingly innocuous variations to the alignment of code may affect the performance of an application. A transformation applied to one region of code can affect the alignment of code that is placed after in the final binary. This can be problematic as performance conclusions may be misattributed to the wrong origins (e.g., performance difference is caused by the change in alignment of subsequently placed code, and not from the original transformation itself) -- a phenomenon known as measurement bias. A feature available in most compilers is forcing the alignment of code to power-of-two boundaries. Although it may remove a source of measurement bias, it can also degrade the performance of the application. Empirical measurements suggest performance differences due to code alignment stems from changing branch prediction behavior. We present a work-in-progress compiler optimization that attempts to predictably align code to mitigate measurement bias while aiding the CPU's branch predictor to maintain/improve performance.</p>
 
-<p><a name="#PTO"><b>Synergizing Parallel Tile Operation (PTO) and Compiler Tile Fusion: A New Paradigm for DSA Acceleratio</b></a><br>
+<p><a name="#PTO"><b>Synergizing Parallel Tile Operation (PTO) and Compiler Tile Fusion: A New Paradigm for DSA Acceleration</b></a><br>
 Wenbo Sun, Ruoyu Zhou, Reza Azimi, Ka Lok Chan </p>
 
 <p><b>Abstract</b>: Domain-Specific Accelerators (DSAs) have become the backbone of high-performance computing and AI workloads, yet efficient coordination between hardware-specific instruction sets and compiler optimizations remains a critical bottleneck. This talk focuses on a novel paradigm for DSA acceleration by coordinating Parallel Tile Operation (PTO)—a tile-centric virtual instruction set—and tile fusion with BiSheng compiler. PTO abstracts complex DSA hardware (e.g., CUBE, MTE, VEC accelerators) into manageable micro-kernels, while tile fusion via BiSheng compiler optimizes these micro-kernels by merging fragmented operations, eliminating pipeline bubbles, and maximizing memory hierarchy utilization.
